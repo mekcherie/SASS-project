@@ -1,3 +1,9 @@
-h1 {
-    display: flex;
+@import 'navbar';
+@import 'colors';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
 }

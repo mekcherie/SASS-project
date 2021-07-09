@@ -1,0 +1,75 @@
+@import 'colors';
+@import 'media-queries';
+
+%align-center {
+    display: flex;
+    align-items: center;
+}
+.navbar {
+    // background-color:$pink;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem calc((100vw-1200px) /2);
+    z-index: 10;
+    position: relative;
+
+    &__logo {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-left: 24px;
+    @extend %align-center;
+    }
+
+    &__bars {
+        opacity: 0;
+
+        @include coffee {
+            color: $brown;
+            opacity: 1;
+            position: absolute;
+            top: 22px;
+            right: 10px;
+            font-size: 2rem;
+        }
+    }
+    &__menu {
+        @extend %align-center;
+        list-style: none;
+        text-align: center;
+        margin-right: 24px;
+
+        @include coffee {
+            display: none;
+        }
+
+    &--links {
+        color: $dark;
+        @extend %align-center;
+        justify-content: center;
+        text-decoration: none;
+        padding: 0 1rem;
+
+        &:hover {
+            color: $brown;
+            transition: all 0.3s ease;
+        }
+    }
+
+    #button {
+        padding: 12px 24px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        background:chartreuse;
+        margin-left: 16px;
+        color:chocolate;
+
+        &:hover {
+            background: $red;
+            transition: all 0.3s ease;
+        }
+    }
+}
+}
